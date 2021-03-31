@@ -1,0 +1,33 @@
+.banner {
+  width: 100%;
+  background: var(--black);
+  color: var(--white);
+  height: var(--banner-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.inner p {
+  color: var(--white);
+}
+
+@media (max-width: 640px) {
+  .banner {
+    height: unset;
+  }
+  .inner {
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

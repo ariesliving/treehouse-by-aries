@@ -1,0 +1,75 @@
+.nav {
+  position: relative;
+  flex: 1;
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+}
+
+.links {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  z-index: 1;
+}
+
+.hotel {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-logo,
+.mobile-top {
+  display: none;
+}
+
+.nav .book :global(a) {
+  background-color: var(--accents-1);
+  color: var(--white);
+  border: 1px solid var(--accents-1);
+  padding: var(--gap-quarter) var(--gap);
+  margin: 0;
+}
+
+.nav .book :global(a:focus),
+.nav .book :global(a:hover) {
+  background-color: transparent;
+  color: var(--accents-1);
+}
+
+.nav .text-right {
+  text-align: right;
+  line-height: 0.5;
+  margin-bottom: var(--gap);
+}
+
+@media (max-width: 960px) {
+  .nav {
+    height: unset;
+    flex-direction: column;
+    padding: var(--gap) 0;
+  }
+
+  .mobile-logo {
+    display: block;
+  }
+
+  .nav .links .logo,
+  .nav .links .hotel,
+  .nav .links .book {
+    display: none;
+  }
+
+  .mobile-top {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: var(--gap-half);
+  }
+
+  .nav .text-right {
+    display: none;
+  }
+}

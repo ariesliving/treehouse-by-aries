@@ -1,0 +1,42 @@
+.paragraph {
+  border-top: 1px solid var(--accents-1);
+  border-bottom: 1px solid var(--accents-1);
+  padding: var(--gap-double);
+}
+
+.main {
+  position: relative;
+  display: flex;
+  margin: var(--gap-triple) 0;
+  flex-direction: row;
+}
+.main.reverse {
+  flex-direction: row-reverse;
+}
+
+.main .content {
+  margin: 0 0 0 var(--gap-triple);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main.reverse .content {
+  margin: 0 var(--gap-triple) 0 0;
+}
+
+.content :global(a) {
+  align-self: center;
+}
+
+@media screen and (max-width: 960px) {
+  .main,
+  .main.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+  .main .content,
+  .main.reverse .content {
+    padding: var(--gap-double) var(--gap);
+    margin: 0;
+  }
+}

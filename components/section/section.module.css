@@ -1,0 +1,46 @@
+.section-header {
+  margin: var(--gap) 0 var(--gap);
+}
+
+.section-header.home {
+  margin: var(--gap-double) 0 var(--gap);
+}
+
+.main {
+  display: flex;
+  text-align: right;
+  padding: var(--gap);
+}
+
+.main.reverse {
+  flex-direction: row-reverse;
+  text-align: left;
+}
+
+.main p {
+  margin: 0 0 0 var(--gap-triple);
+  align-self: center;
+  line-height: 2;
+}
+
+.main.reverse p {
+  margin: 0 var(--gap-triple) 0 0;
+}
+
+@media screen and (max-width: 960px) {
+  .main,
+  .main.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+  .main p,
+  .main.reverse p {
+    padding: var(--gap) 0;
+    margin: 0;
+    line-height: unset;
+  }
+
+  .section-header {
+    margin: 0;
+  }
+}
